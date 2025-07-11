@@ -25,6 +25,7 @@ void addClues(char *s,int data){
 }
 void treasureHunt(){
     struct Node* temp=head;
+    int c=3;
     while(temp!=NULL){
         printf("%s\n",temp->clue);
         int n;
@@ -33,7 +34,10 @@ void treasureHunt(){
             temp=temp->next;
         }
         else{
+            c--;
+            if(c==0)
             printf("Better luck next time!\n");
+            printf("%d chances more\n",c);
         }
     }
     printf("Won the treasure :)\n");
