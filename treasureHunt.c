@@ -32,6 +32,7 @@ void treasureHunt(){
         scanf("%d",&n);
         if(n==temp->ans){
             temp=temp->next;
+            c=3;
         }
         else{
             c--;
@@ -50,7 +51,5 @@ int main()
     addClues("Top half of 8",0);
     addClues("I'm an odd number.Take away one letter,and I become even",7);
     treasureHunt();
-    
-}
     return 0;
 }
